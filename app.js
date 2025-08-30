@@ -12,17 +12,17 @@ function exibirTexto(tag, texto) {
 // função unica para exibir o texto inicial, evitando a repetição;
 function exibirTextoInicial() {
     exibirTexto('h1', 'Jogo do número secreto!');
-    exibirTexto('p', 'Chute um número entre 1 e 10');
+    exibirTexto('p', 'Chute um número entre 1 e 100');
 }
 
 exibirTextoInicial(); // chamando a função criada acima;
 
 // função para gerar um número aleatório;
 function gerarNumeroAleatorio() {
-    let numeroEscolhido = parseInt(Math.random() * 10 + 1); // gerando um número entre 1 e 10;
+    let numeroEscolhido = parseInt(Math.random() * 100 + 1); // gerando um número entre 1 e 10;
     let quantidadeNumerosSorteados = numerosSorteados.length; // quantidade de números já sorteados;
 
-    if (quantidadeNumerosSorteados == 5) { // se sortear 5 números, reinicia a lista;
+    if (quantidadeNumerosSorteados == 10) { // se sortear 10 números, reinicia a lista;
         numerosSorteados = [];
     }
 
